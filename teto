@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+    echo "  teto -S <package>    install package"
+    echo "  teto -R <package>    remove package"
+    echo "  teto -U              upgrade packages"
+    exit 0
+fi
+
+case "$1" in
+    -S)
+        shift
+        sh ./modules/install "$@"
+        ;;
+    -R)
+        shift
+        sh ./modules/remove "$@"
+        ;;
+    -U)
+        shift
+        sh ./modules/upgrade "$@"
+        ;;
+	-L)
+		shift
+		sh ./modules/list "$@"
+		;;
+    *)
+        echo "Unkown command."
+        ;;
+esac
+
+echo "Exiting..."
