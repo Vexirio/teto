@@ -1,3 +1,0 @@
-#!/bin/sh
-set -- $(while IFS= read -r line; do echo "$line"; done < pkgs/installed)
-echo "$*"

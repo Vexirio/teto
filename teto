@@ -3,28 +3,22 @@ if [ $# -eq 0 ]; then
     echo "  teto -S <package>    install package"
     echo "  teto -R <package>    remove package"
     echo "  teto -U              upgrade packages"
-    echo "  teto -L              list of packages
     exit 0
 fi
 case "$1" in
     -S)
         shift
-        sh ./modules/install "$@"
+        sh /teto/modules/install "$@"
         ;;
     -R)
         shift
-        sh ./modules/remove "$@"
+        sh /teto/modules/remove "$@"
         ;;
     -U)
         shift
-        sh ./modules/upgrade "$@"
+        sh /teto/modules/upgrade "$@"
         ;;
-	-L)
-		shift
-		sh ./modules/list "$@"
-		;;
     *)
-        echo "Unkown command."
+        echo "unkown command"
         ;;
 esac
-echo "Exiting..."
