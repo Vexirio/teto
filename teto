@@ -4,6 +4,7 @@ if [ $# -eq 0 ]; then
     echo "  teto -S <package>    install package"
     echo "  teto -R <package>    remove package"
     echo "  teto -U              upgrade packages"
+    echo "  teto -L              list of packages
     exit 0
 fi
 
