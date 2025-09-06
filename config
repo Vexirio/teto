@@ -1,1 +1,2 @@
-install=build #Options: build,bin-glibc,bin-musl
+install=build
+checksums=true
