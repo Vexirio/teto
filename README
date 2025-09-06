@@ -16,12 +16,11 @@ teto/
 └─ teto # main executable
 
 ## Usage
-```sh
 teto -S <pkg>    # install a package
 teto -R <pkg>    # remove a package
 teto -U <pkg>    # update a package
 
-Requirements
+## Requirements
 Linux
 POSIX-compatible shell
 sed
