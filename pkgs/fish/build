@@ -1,0 +1,8 @@
+#!/bin/sh
+curl -L https://github.com/fish-shell/fish-shell/archive/refs/heads/master.tar.gz -o master.tar.gz
+cd fish-shell-master
+mkdir build
+cd build
+cmake ..
+cmake --build .
+cmake --install .

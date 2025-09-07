@@ -1,7 +1,0 @@
-linux
-sed
-c99 compiler
-autotools
-make
-curl
-POSIX shell

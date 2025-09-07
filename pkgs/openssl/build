@@ -1,0 +1,7 @@
+#!/bin/sh
+curl -L https://github.com/openssl/openssl/releases/download/openssl-3.5.2/openssl-3.5.2.tar.gz -o openssl.tar.gz
+tar -xvf openssl.tar.gz
+cd openssl-3.5.2
+perl Configure
+make -j$(nproc)
+make install

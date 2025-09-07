@@ -1,11 +1,10 @@
 #!/bin/sh
-set -e
 if [ "$(id -u)" -ne 0 ]; then
     echo "need root"
     exit 1
 fi
 pkg="$1"
-if [ ! -d "/teto/pkgs/build/$pkg" ]; then
+if [ ! -d "/teto/pkgs/$pkg" ]; then
     echo "$pkg not found"
     exit 1
 fi
@@ -18,6 +17,7 @@ if [ "$found" -eq 1 ]; then
     exit 1
 fi
 cd /teto/env
-sh /teto/pkgs/build/$pkg/build
+sh /teto/pkgs/$pkg/depends
+sh /teto/pkgs/$pkg/build
 sed -i "\$a $pkg" /teto/pkgs/installed
 echo "$pkg was installed"

@@ -16,6 +16,6 @@ for pkg in "$@"; do
     echo "updating $pkg..."
     rm -f "/bin/$pkg" "/sbin/$pkg"
     cd /teto/env
-    sh /teto/pkgs/build/$pkg/build
+    sh /teto/pkgs/$pkg/build
     echo "$pkg updated"
 done
