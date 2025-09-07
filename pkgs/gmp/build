@@ -1,0 +1,7 @@
+#!/bin/sh
+curl -L https://ftp.fau.de/gnu/gmp/gmp-6.3.0.tar.xz -o gmp.tar.xz
+tar -xf gmp.tar.xz
+cd gmp-6.3.0
+./configure --prefix=/usr/local
+make -j$(nproc)
+make install

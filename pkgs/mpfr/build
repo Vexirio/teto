@@ -1,0 +1,7 @@
+#!/bin/sh
+curl -L https://ftp.fau.de/gnu/mpfr/mpfr-4.2.2.tar.xz -o mpfr.tar.xz
+tar -xf mpfr.tar.xz
+cd mpfr-4.2.2
+./configure --prefix=/usr/local --with-gmp=/usr/local
+make -j$(nproc)
+make install

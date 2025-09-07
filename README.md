@@ -24,7 +24,11 @@ C99 compiler
 
 make
 
-autotools
+automake
+
+autoconf
+
+libtool
 
 curl
 
