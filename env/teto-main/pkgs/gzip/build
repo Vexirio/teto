@@ -1,7 +1,0 @@
-#!/bin/sh
-curl -L https://ftp.fau.de/gnu/gzip/gzip-1.14.tar.xz -o gzip.tar.xz
-tar -xvf gzip.tar.xz
-cd gzip-1.14
-sh configure
-make -j$(nproc)
-make install

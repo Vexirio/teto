@@ -1,5 +1,0 @@
-#!/bin/sh
-sh /teto/modules/install gcc
-sh /teto/modules/install curl
-sh /teto/modules/install make
-sh /teto/modules/install dash

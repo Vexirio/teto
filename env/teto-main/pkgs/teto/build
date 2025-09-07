@@ -1,6 +1,0 @@
-#!/bin/sh
-curl -L https://github.com/Vexirio/teto/archive/refs/heads/main.tar.gz -o main.tar.gz
-tar -xvf main.tar.gz
-mkdir /teto
-cp /teto/env/teto-main/* /teto
-ln -s /teto/teto /bin/

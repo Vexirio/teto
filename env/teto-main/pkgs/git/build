@@ -1,8 +1,0 @@
-#!/bin/sh
-curl -L https://github.com/git/git/archive/refs/tags/v2.51.0.tar.gz -o git.tar.gz
-tar -xvf git.tar.gz
-cd git-2.51.0
-make configure
-sh configure
-make -j$(nproc)
-make install

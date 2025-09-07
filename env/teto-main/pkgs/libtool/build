@@ -1,7 +1,0 @@
-#!/bin/sh
-curl -L https://ftp.fau.de/gnu/libtool/libtool-2.5.4.tar.xz -o libtool.tar.xz
-tar -xvf libtool.tar.xz
-cd libtool-2.5.4
-sh configure
-make -j$(nproc)
-make install
