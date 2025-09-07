@@ -1,0 +1,7 @@
+#!/bin/sh
+curl -L https://ftp.fau.de/gnu/automake/automake-1.18.1.tar.xz -o automake.tar.xz
+tar -xvf automake.tar.xz
+cd automake-1.18.1
+sh configure
+make -j$(nproc)
+make install

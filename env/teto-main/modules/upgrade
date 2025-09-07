@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+if [ "$(id -u)" -ne 0 ]; then
+    echo "need root"
+    exit 1
+fi
+for pkg in "$@"; do
+    found=0
+    while IFS= read -r line; do
+        [ "$line" = "$pkg" ] && found=1 && break
+    done < /teto/pkgs/installed
+    if [ "$found" -eq 0 ]; then
+        echo "$pkg is not installed"
+        continue
+    fi
+    echo "updating $pkg..."
+    rm -f "/bin/$pkg" "/sbin/$pkg"
+    cd /teto/env
+    sh /teto/pkgs/$pkg/build
+    echo "$pkg updated"
+done
