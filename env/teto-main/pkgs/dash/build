@@ -1,0 +1,9 @@
+#!/bin/sh
+curl -L https://git.kernel.org/pub/scm/utils/dash/dash.git/snapshot/dash-0.5.12.tar.gz -o dash.tar.gz
+tar -xvf dash.tar.gz
+cd dash-0.5.12
+sh autogen.sh
+sh configure
+make -j$(nproc)
+make install
+ln -s /usr/local/bin/dash /bin/sh
