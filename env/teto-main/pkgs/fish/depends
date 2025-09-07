@@ -1,4 +1,0 @@
-#!/bin/sh
-sh /teto/modules/install rust
-sh /teto/modules/install cmake
-sh /teto/modules/install git

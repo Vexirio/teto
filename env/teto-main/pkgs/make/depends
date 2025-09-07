@@ -1,5 +1,0 @@
-#!/bin/sh
-sh /teto/modules/install automake
-sh /teto/modules/install autoconf
-sh /teto/modules/install libtool
-sh /teto/modules/install pkg-config

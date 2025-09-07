@@ -1,7 +1,0 @@
-#!/bin/sh
-curl -L https://gitlab.kitware.com/cmake/cmake/-/archive/v4.1.1/cmake-v4.1.1.tar.gz?ref_type=tags -o cmake.tar.gz
-tar -xvf cmake.tar.gz
-cd cmake-v4.1.1
-sh bootstrap
-make -j$(nproc) 
-make install
