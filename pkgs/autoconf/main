@@ -6,4 +6,4 @@ curl -L $url -o $file
 tar -xf $file
 cd $dir
 ./$configure
-sh $build
+sh /teto/modules/build/$build
