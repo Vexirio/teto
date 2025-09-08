@@ -3,3 +3,4 @@ file=autoconf.tar.xz
 dir=autoconf-*
 build=conf-make
 depends=xz m4 perl
+configure=configure
