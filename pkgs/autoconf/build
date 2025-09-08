@@ -1,6 +1,0 @@
-curl -L https://ftp.fau.de/gnu/autoconf/autoconf-2.72.tar.xz -o autoconf.tar.xz
-tar -xvf autoconf.tar.xz
-cd autoconf-2.72
-sh configure
-make -j$(nproc)
-make install
