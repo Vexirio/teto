@@ -4,6 +4,11 @@ set -e
 sh /teto/modules/install $depends
 curl -L $url -o $file
 tar -xf $file
-cd $dir
+for d in $dir; do
+    if [ -d "$d" ]; then
+        cd "$d"
+        break
+    fi
+done
 ./$configure
 sh /teto/modules/build/$build
