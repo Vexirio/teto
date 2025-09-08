@@ -1,3 +1,4 @@
 url=https://ftp.fau.de/gnu/autoconf/autoconf-latest.tar.xz
+dir=autoconf-*
 build=conf-make
 depends=xz m4 perl
