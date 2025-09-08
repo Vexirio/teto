@@ -1,3 +1,3 @@
-sh configure
+#!/bin/sh
 make -j$(nproc)
 make install
