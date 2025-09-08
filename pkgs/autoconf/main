@@ -2,4 +2,8 @@
 set -e
 . ./config
 sh /teto/modules/install $depends
-curl -L $url -o 
+curl -L $url -o $file
+tar -xf $file
+cd $dir
+sh $configure
+sh $build
