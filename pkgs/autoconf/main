@@ -5,5 +5,5 @@ sh /teto/modules/install $depends
 curl -L $url -o $file
 tar -xf $file
 cd $dir
-sh $configure
+./$configure
 sh $build
